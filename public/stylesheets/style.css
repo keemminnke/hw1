@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+#passwordmacth {
+  margin-top: 5px; 
+  color: red; 
+  color: green;
+  font-size: 12px;
+}

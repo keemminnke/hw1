@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>join</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+<!-- ... (이전 코드) ... -->
+<body>
+    <h1>회원가입 페이지</h1>
+    <form id="joinForm" action="/join" method="POST">
+        <label for="newUserId">ID:</label>
+        <input type="text" id="newUserId" name="newUserId" >
+        <button type="button"  onclick="checkDuplicateID()" >중복 확인</button>
+        <span id="userIdWarning"></span>
+        <br>
+        <label for="newPassword1">Password:</label>
+        <input type="password" id="newPassword1" oninput="pwCheck()" name="newPassword1">
+        <br>
+        <label for="newPassword2">Confirm Password:</label>
+        <input type="password" id="newPassword2" oninput="pwCheck()" name="newPassword2">
+        <br>
+        <span id="passwordMatch">비밀번호를 영어와 숫자의 조합으로 4글자 이상입력해주세요.</span>
+        <br>
+        <button type="button" id="registrationButton" onclick="submitRegistration()"disabled >가입하기</button>
+    </form>
+    <script src="/javascripts/join.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</body>
+</html>
+
+
+
+

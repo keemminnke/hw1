@@ -1,13 +1,32 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const fs = require("fs");
+const { verifyToken } = require("./middlewares");
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index");
+
+
+router.get("/", function (req, res,) {
+  fs.readFile("./views/index.html", (err, data) => {
+      if (err) {
+          res.send("error");
+      } else {
+          res.writeHead(200, { "Content-Type": "text/html" });
+          res.write(data);
+          res.end();
+      }
+  });
 });
-
-router.get("/hello", function (req, res, next) {
-  res.render("hello");
+//토큰 검증요청
+router.get("/verifyToken", verifyToken, (req, res) => {
+  console.log(req)
+  if (req.decoded) {
+    res.json({
+      code: 200,
+      message: "환영합니다. 고객님",
+    });
+  } 
 });
-
 module.exports = router;
+
+
+

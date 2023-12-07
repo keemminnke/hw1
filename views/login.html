@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <p>개발자: [2019321023] [김민건]</p>
+</head>
+<body>
+    <h1>로그인 페이지</h1>
+
+    <form id="loginForm" action="/login" method="POST">
+        <label for="userId">ID:</label>
+        <input type="text" id="userId" name="userId" required>
+        <br>
+        <label for="userPassword">Password:</label>
+        <input type="password" id="userPassword" name="userPassword" required>
+        <br>
+        <label for="rememberMe">로그인 유지</label>
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+        <br>
+        <button type="button" id="loginButton" onclick="loginAsk()" >로그인</button>
+    </form>
+    <button id="gotojoinButton">회원가입</button>
+    <script src="/javascripts/login.js"></script>
+</body>
+</html>
+
+
+
