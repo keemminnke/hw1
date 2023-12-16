@@ -6,8 +6,8 @@ const connect = () => {
     mongoose.set("debug", true);
   }
 
-  mongoose.connect("mongodb://root:1234@127.0.0.1:27017/admin", {
-    dbName: "kwic",
+  mongoose.connect(process.env.MONGODB_URI, {
+    dbName: process.env.MONGODB_DB_NAME,
   });
 };
 
