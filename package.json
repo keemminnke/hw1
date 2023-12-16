@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build": "webpack",
+    "build": "",
     "deploy": "npm run build && scp -r build/ [alsrjs0418]@[35.222.160.181]:[hw1]"
   },
   "dependencies": {
